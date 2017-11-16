@@ -1,1 +1,1 @@
-* * * * * root . /root/project_env.sh; . /app/backup.sh
+0 0 * * * root . /root/project_env.sh; . /app/backup.sh
