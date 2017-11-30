@@ -13,5 +13,6 @@ ADD crontab /etc/cron.d/backup-cron
 # Give execution rights on the cron job
 RUN chmod 0644 /etc/cron.d/backup-cron
 RUN chmod 0644 /app/backup.sh
+RUN chmod +x /app/docker-entrypoint.sh
 
 CMD ["/app/docker-entrypoint.sh"]
