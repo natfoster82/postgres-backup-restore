@@ -47,5 +47,4 @@ else
   s3cmd put $TEMP_FILE $S3_FILE_LATEST --encrypt
 fi
 
-s3cmd put $TEMP_FILE $S3_FILE --encrypt
 rm "$TEMP_FILE"
