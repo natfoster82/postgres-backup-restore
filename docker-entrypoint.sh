@@ -17,8 +17,6 @@ CRONTAB_FILE=/etc/cron.d/backup-cron/crontab
 echo "0 ${BACKUP_HOUR:-0} * * * root . /root/project_env.sh; . /app/backup.sh" > "$CRONTAB_FILE"
 echo "" >> "$CRONTAB_FILE"
 
-chmod 0644 /etc/cron.d/backup-cron
-
 printenv | sed 's/^\(.*\)$/export \1/g' > /root/project_env.sh
 
 cron -f
