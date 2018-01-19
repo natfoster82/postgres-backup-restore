@@ -12,7 +12,7 @@ echo "secret_key=${S3_SECRET_ACCESS_KEY}" >> "$S3CMD_CONFIG"
 echo "gpg_passphrase=${S3_PASSPHRASE}" >> "$S3CMD_CONFIG"
 echo "" >> "$S3CMD_CONFIG"
 
-CRONTAB_FILE=/etc/cron.d/backup-cron/crontab
+CRONTAB_FILE=/etc/cron.d/backup-cron
 
 echo "0 ${BACKUP_HOUR:-0} * * * root . /root/project_env.sh; . /app/backup.sh" > "$CRONTAB_FILE"
 echo "" >> "$CRONTAB_FILE"
